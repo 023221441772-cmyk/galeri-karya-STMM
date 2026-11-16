@@ -1,0 +1,89 @@
+/* Gaya khusus layar Kategori */
+
+.kategori-header {
+  padding: var(--jarak-4) var(--jarak-4) 0;
+}
+
+.kategori-header .judul-layar {
+  margin-bottom: var(--jarak-3);
+}
+
+/* Sub-filter: info jumlah & tombol urut */
+.bilah-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--jarak-1);
+  padding: 0 2px;
+}
+
+.bilah-info__jumlah {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--warna-redup);
+}
+
+.tombol-urut {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--warna-utama);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.tombol-urut svg {
+  transition: transform 0.2s ease;
+}
+
+.tombol-urut[aria-expanded="true"] svg {
+  transform: rotate(180deg);
+}
+
+/* Menu Dropdown Pengurutan (opsional/interaktif) */
+.wadah-urut {
+  position: relative;
+}
+
+.menu-urut {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 4px);
+  background: var(--warna-putih);
+  border: 1px solid var(--warna-garis);
+  border-radius: var(--sudut-sedang);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  min-width: 130px;
+  z-index: 15;
+  overflow: hidden;
+}
+
+.menu-urut__item {
+  border: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--warna-teks);
+  text-align: left;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.menu-urut__item:hover,
+.menu-urut__item:focus {
+  background: var(--warna-latar-lembut);
+}
+
+.menu-urut__item[aria-selected="true"] {
+  color: var(--warna-utama);
+  font-weight: 800;
+  background: var(--warna-latar);
+}

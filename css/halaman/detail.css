@@ -1,0 +1,210 @@
+/* Gaya khusus layar Detail Karya */
+
+body[data-halaman="detail"] .konten {
+  gap: var(--jarak-4);
+  padding-top: var(--jarak-4);
+}
+
+/* ---------- Pemutar / Pratinjau Media ---------- */
+.pemutar {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--warna-pemutar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.pemutar iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.pemutar__putar {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--sudut-pil);
+  background: var(--warna-putih);
+  color: var(--warna-pemutar);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.pemutar__putar:active {
+  transform: scale(0.94);
+}
+
+.pemutar__keterangan {
+  position: absolute;
+  left: var(--jarak-4);
+  bottom: var(--jarak-3);
+  font-size: var(--teks-ket);
+  color: rgba(255, 255, 255, 0.85);
+  pointer-events: none;
+}
+
+/* ---------- Detail Header (Tag & Judul) ---------- */
+.detail-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--jarak-2);
+}
+
+.detail__judul {
+  font-size: var(--teks-layar);
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--warna-teks);
+}
+
+/* Deret Tag Kategori & Genre */
+.deret-tag {
+  display: flex;
+  align-items: center;
+  gap: var(--jarak-2);
+}
+
+.tag {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--sudut-pil);
+  display: inline-flex;
+  align-items: center;
+}
+
+.tag--kategori {
+  background: var(--kat-bg, var(--warna-latar));
+  color: var(--kat-fg, var(--warna-tua));
+}
+
+.tag--genre {
+  background: #F1F5F9;
+  color: #475569;
+}
+
+/* ---------- Kartu Kreator ---------- */
+.kreator-kartu {
+  background: var(--warna-latar-lembut);
+  border-radius: var(--sudut-besar);
+  padding: var(--jarak-3) var(--jarak-4);
+  display: flex;
+  align-items: center;
+  gap: var(--jarak-3);
+}
+
+.kreator-kartu__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--sudut-pil);
+  background: var(--warna-utama);
+  color: var(--warna-putih);
+  font-weight: 800;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.kreator-kartu__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.kreator-kartu__nama {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--warna-teks);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kreator-kartu__sub {
+  font-size: var(--teks-ket);
+  color: var(--warna-redup);
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.kreator-kartu__tautan {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--warna-utama);
+  text-decoration: none;
+  padding: var(--jarak-1) var(--jarak-2);
+}
+
+/* ---------- Sinopsis ---------- */
+.detail__sinopsis {
+  font-size: var(--teks-isi);
+  line-height: 1.6;
+  color: var(--warna-teks-isi);
+}
+
+/* ---------- Grid Metadata (3 Kotak) ---------- */
+.meta-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.6fr;
+  gap: var(--jarak-2);
+}
+
+.meta-kotak {
+  border: 1px solid var(--warna-garis);
+  border-radius: var(--sudut-sedang);
+  background: var(--warna-putih);
+  padding: 10px var(--jarak-3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+
+.meta-kotak__label {
+  font-size: 11px;
+  color: var(--warna-redup);
+  margin-bottom: 2px;
+}
+
+.meta-kotak__nilai {
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--warna-teks);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Deret Tombol Aksi ---------- */
+.deret-tombol {
+  display: flex;
+  gap: var(--jarak-3);
+}
+
+.deret-tombol .tombol {
+  flex: 1;
+}
+
+/* ---------- Karya Lain dari Kreator ---------- */
+.seksi-karya-lain {
+  margin-top: var(--jarak-2);
+}
+
+#karya-lain .thumb__label {
+  display: none;
+}
+
+#karya-lain .thumb {
+  height: 110px;
+}

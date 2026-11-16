@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0179BB">
+  <title>Kategori · Galeri Karya STMM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/halaman/kategori.css">
+</head>
+<body data-halaman="kategori">
+  <div class="app">
+    <!-- Header Layar Kategori -->
+    <header class="kategori-header">
+      <h1 class="judul-layar">Kategori</h1>
+      
+      <!-- Deret Chip Filter -->
+      <div class="deret-chip" id="daftar-chip-kategori"></div>
+
+      <!-- Bilah Info Jumlah & Urut -->
+      <div class="bilah-info">
+        <span class="bilah-info__jumlah" id="info-jumlah"></span>
+        <div class="wadah-urut">
+          <button type="button" class="tombol-urut" id="tombol-urut" aria-haspopup="listbox" aria-expanded="false">
+            <span id="label-urut">Terbaru</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="m6 9 6 6 6-6"/>
+            </svg>
+          </button>
+          <div class="menu-urut" id="menu-urut" hidden role="listbox">
+            <button type="button" class="menu-urut__item" role="option" data-urut="terbaru" aria-selected="true">Terbaru</button>
+            <button type="button" class="menu-urut__item" role="option" data-urut="terlama">Terlama</button>
+            <button type="button" class="menu-urut__item" role="option" data-urut="judul">Judul (A-Z)</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Konten Grid Karya -->
+    <main class="konten" style="padding-top: var(--jarak-3);">
+      <div class="grid-2" id="grid-karya"></div>
+    </main>
+
+    <!-- Bilah Navigasi Bawah -->
+    <nav class="nav-bawah" id="nav-bawah" aria-label="Navigasi utama"></nav>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/halaman/kategori.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0179BB">
+  <title>Tentang · Galeri Karya STMM</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/halaman/tentang.css">
+</head>
+<body data-halaman="tentang">
+  <div class="app">
+    <!-- Header Layar Tentang -->
+    <header class="tentang-header">
+      <h1 class="judul-layar">Tentang</h1>
+    </header>
+
+    <main class="konten" style="padding-top: var(--jarak-3);">
+      <!-- Hero Card Galeri Karya STMM -->
+      <section class="tentang-hero">
+        <img class="tentang-hero__logo" src="assets/logo-stmm.png" alt="Logo STMM">
+        <h2 class="tentang-hero__judul">Galeri Karya STMM</h2>
+        <p class="tentang-hero__sub">Etalase digital karya mahasiswa: film, video, podcast, foto, dan gim.</p>
+      </section>
+
+      <!-- Seksi Tentang Galeri -->
+      <section class="bagian">
+        <h2 class="judul-bagian">Tentang Galeri</h2>
+        <p class="teks-isi">Galeri ini menampilkan karya pilihan mahasiswa dari berbagai mata kuliah. Setiap karya dikurasi tim kurator dan hanya tayang dengan izin kreatornya.</p>
+      </section>
+
+      <!-- Seksi Punya karya untuk ditampilkan? -->
+      <section class="bagian">
+        <h2 class="judul-bagian">Punya karya untuk ditampilkan?</h2>
+        <p class="teks-isi">Ajukan karyamu lengkap dengan link video dan izin publikasi.</p>
+        <button type="button" class="tombol tombol--utama tombol--penuh" id="tombol-ajukan" style="margin-top: var(--jarak-1);">Ajukan Karya</button>
+      </section>
+
+      <!-- Grup Menu Informasi -->
+      <section class="grup-menu" id="grup-menu-info">
+        <button type="button" class="grup-menu__item" data-info="kebijakan">
+          <span>Kebijakan Karya & Hak Cipta</span>
+          <span class="grup-menu__ikon" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="grup-menu__item" data-info="tim">
+          <span>Tim Pengembang</span>
+          <span class="grup-menu__ikon" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="grup-menu__item" data-info="kontak">
+          <span>Kontak</span>
+          <span class="grup-menu__ikon" aria-hidden="true"></span>
+        </button>
+      </section>
+
+      <!-- Footer Atribusi -->
+      <footer class="tentang-footer">
+        Dibuat oleh mahasiswa Mobile Computing STMM · v0.1
+      </footer>
+    </main>
+
+    <!-- Modal Informasi Dialog -->
+    <div class="modal-overlay" id="modal-info" hidden>
+      <div class="modal-kotak" role="dialog" aria-modal="true" aria-labelledby="modal-judul">
+        <h3 class="modal-kotak__judul" id="modal-judul"></h3>
+        <p class="modal-kotak__isi" id="modal-isi"></p>
+        <button type="button" class="tombol tombol--utama" id="modal-tutup" style="margin-top: var(--jarak-2);">Tutup</button>
+      </div>
+    </div>
+
+    <!-- Bilah Navigasi Bawah -->
+    <nav class="nav-bawah" id="nav-bawah" aria-label="Navigasi utama"></nav>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/halaman/tentang.js"></script>
+</body>
+</html>
